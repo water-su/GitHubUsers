@@ -16,6 +16,7 @@ class ViewController: UIViewController {
         didSet{
             tableView.dataSource = self
             tableView.delegate = self
+            tableView.register(UINib(nibName: "IconTitleStatusTableViewCell", bundle: nil), forCellReuseIdentifier: cellId)
         }
     }
     
@@ -28,15 +29,19 @@ class ViewController: UIViewController {
 
 }
 extension ViewController: UITableViewDataSource, UITableViewDelegate{
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableView.automaticDimension
+    }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return 5
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: .default, reuseIdentifier: cellId)
-        cell.textLabel?.text = "cell"
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as? IconTitleStatusTableViewCell else{
+            return UITableViewCell(style: .default, reuseIdentifier: "failCell")
+        }
+        cell.bind(vm: UserDummyData( indexPath.row % 2 == 0 ))
         return cell
     }
-    
     
 }

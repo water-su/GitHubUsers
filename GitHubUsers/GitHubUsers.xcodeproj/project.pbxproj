@@ -14,6 +14,8 @@
 		4985285C24AC480D0013C861 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4985285B24AC480D0013C861 /* Assets.xcassets */; };
 		4985285F24AC480D0013C861 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4985285D24AC480D0013C861 /* LaunchScreen.storyboard */; };
 		4985286724AC50940013C861 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4985286624AC50940013C861 /* ViewController.xib */; };
+		4985286B24AC69ED0013C861 /* IconTitleStatusTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4985286924AC69ED0013C861 /* IconTitleStatusTableViewCell.swift */; };
+		4985286C24AC69ED0013C861 /* IconTitleStatusTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4985286A24AC69ED0013C861 /* IconTitleStatusTableViewCell.xib */; };
 		BBB4F762471D75E62B8930D7 /* Pods_GitHubUsers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00E9CEB22983BEFE2A86D6B9 /* Pods_GitHubUsers.framework */; };
 /* End PBXBuildFile section */
 
@@ -28,6 +30,8 @@
 		4985285E24AC480D0013C861 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4985286024AC480D0013C861 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4985286624AC50940013C861 /* ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
+		4985286924AC69ED0013C861 /* IconTitleStatusTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconTitleStatusTableViewCell.swift; sourceTree = "<group>"; };
+		4985286A24AC69ED0013C861 /* IconTitleStatusTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IconTitleStatusTableViewCell.xib; sourceTree = "<group>"; };
 		752C06C77BCC96ABA6593CC2 /* Pods-GitHubUsers.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHubUsers.release.xcconfig"; path = "Target Support Files/Pods-GitHubUsers/Pods-GitHubUsers.release.xcconfig"; sourceTree = "<group>"; };
 		869C3F6B0AFFE7AF78BEB051 /* Pods-GitHubUsers.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHubUsers.debug.xcconfig"; path = "Target Support Files/Pods-GitHubUsers/Pods-GitHubUsers.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -65,6 +69,7 @@
 		4985284E24AC480B0013C861 /* GitHubUsers */ = {
 			isa = PBXGroup;
 			children = (
+				4985286824AC686A0013C861 /* view */,
 				4985284F24AC480B0013C861 /* AppDelegate.swift */,
 				4985285124AC480B0013C861 /* SceneDelegate.swift */,
 				4985285324AC480B0013C861 /* ViewController.swift */,
@@ -75,6 +80,15 @@
 				4985285824AC480B0013C861 /* GitHubUsers.xcdatamodeld */,
 			);
 			path = GitHubUsers;
+			sourceTree = "<group>";
+		};
+		4985286824AC686A0013C861 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				4985286924AC69ED0013C861 /* IconTitleStatusTableViewCell.swift */,
+				4985286A24AC69ED0013C861 /* IconTitleStatusTableViewCell.xib */,
+			);
+			path = view;
 			sourceTree = "<group>";
 		};
 		5B21C33E0947F184F888A32E /* Frameworks */ = {
@@ -156,6 +170,7 @@
 			files = (
 				4985285F24AC480D0013C861 /* LaunchScreen.storyboard in Resources */,
 				4985285C24AC480D0013C861 /* Assets.xcassets in Resources */,
+				4985286C24AC69ED0013C861 /* IconTitleStatusTableViewCell.xib in Resources */,
 				4985286724AC50940013C861 /* ViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -211,6 +226,7 @@
 			files = (
 				4985285424AC480B0013C861 /* ViewController.swift in Sources */,
 				4985285A24AC480B0013C861 /* GitHubUsers.xcdatamodeld in Sources */,
+				4985286B24AC69ED0013C861 /* IconTitleStatusTableViewCell.swift in Sources */,
 				4985285024AC480B0013C861 /* AppDelegate.swift in Sources */,
 				4985285224AC480B0013C861 /* SceneDelegate.swift in Sources */,
 			);

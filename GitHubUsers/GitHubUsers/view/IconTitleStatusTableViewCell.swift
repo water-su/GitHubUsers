@@ -9,17 +9,11 @@
 import UIKit
 import SDWebImage
 
-protocol IconTitleStatusViewModelProtocol {
-    var icon: String {get}
-    var title: String {get}
-    var status: (label: String, color: UIColor)? {get}
-}
-
 struct UserDummyData: IconTitleStatusViewModelProtocol {
+
+    var icon: String? = "https://www.gravatar.com/avatar/80ae0181e9a1b4cca4cc34b0f1c0aee9?s=64&d=identicon&r=PG&f=1"
     
-    var icon: String = "https://www.gravatar.com/avatar/80ae0181e9a1b4cca4cc34b0f1c0aee9?s=64&d=identicon&r=PG&f=1"
-    
-    var title: String = "Dummy User"
+    var title: String? = "Dummy User"
     
     var status: (label: String, color: UIColor)?
     
@@ -67,7 +61,7 @@ class IconTitleStatusTableViewCell: UITableViewCell {
         
         self.titleLabel.text = vm.title
         
-        if let url = URL(string: vm.icon){
+        if let icon = vm.icon, let url = URL(string: icon){
             self.iconView.sd_setImage(with: url, completed: nil)
         }   // TODO: to add image placeholder for user without avatar (no url or no image)
 

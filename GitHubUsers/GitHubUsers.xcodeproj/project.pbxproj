@@ -16,6 +16,13 @@
 		4985286724AC50940013C861 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4985286624AC50940013C861 /* ViewController.xib */; };
 		4985286B24AC69ED0013C861 /* IconTitleStatusTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4985286924AC69ED0013C861 /* IconTitleStatusTableViewCell.swift */; };
 		4985286C24AC69ED0013C861 /* IconTitleStatusTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4985286A24AC69ED0013C861 /* IconTitleStatusTableViewCell.xib */; };
+		4985286F24AC96DE0013C861 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4985286E24AC96DE0013C861 /* APIManager.swift */; };
+		4985287224ADB97B0013C861 /* DebugUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4985287124ADB97B0013C861 /* DebugUtil.swift */; };
+		4985287524ADBD1B0013C861 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4985287424ADBD1B0013C861 /* User.swift */; };
+		4985287824ADCF0F0013C861 /* UserListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4985287724ADCF0F0013C861 /* UserListViewModel.swift */; };
+		4985287A24ADD9FF0013C861 /* UserItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4985287924ADD9FF0013C861 /* UserItemViewModel.swift */; };
+		4985287C24ADDE720013C861 /* ListViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4985287B24ADDE720013C861 /* ListViewModelProtocol.swift */; };
+		4985287E24ADDEB80013C861 /* ItemViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4985287D24ADDEB80013C861 /* ItemViewModelProtocol.swift */; };
 		BBB4F762471D75E62B8930D7 /* Pods_GitHubUsers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00E9CEB22983BEFE2A86D6B9 /* Pods_GitHubUsers.framework */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +39,13 @@
 		4985286624AC50940013C861 /* ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
 		4985286924AC69ED0013C861 /* IconTitleStatusTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconTitleStatusTableViewCell.swift; sourceTree = "<group>"; };
 		4985286A24AC69ED0013C861 /* IconTitleStatusTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IconTitleStatusTableViewCell.xib; sourceTree = "<group>"; };
+		4985286E24AC96DE0013C861 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		4985287124ADB97B0013C861 /* DebugUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugUtil.swift; sourceTree = "<group>"; };
+		4985287424ADBD1B0013C861 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		4985287724ADCF0F0013C861 /* UserListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewModel.swift; sourceTree = "<group>"; };
+		4985287924ADD9FF0013C861 /* UserItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserItemViewModel.swift; sourceTree = "<group>"; };
+		4985287B24ADDE720013C861 /* ListViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModelProtocol.swift; sourceTree = "<group>"; };
+		4985287D24ADDEB80013C861 /* ItemViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemViewModelProtocol.swift; sourceTree = "<group>"; };
 		752C06C77BCC96ABA6593CC2 /* Pods-GitHubUsers.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHubUsers.release.xcconfig"; path = "Target Support Files/Pods-GitHubUsers/Pods-GitHubUsers.release.xcconfig"; sourceTree = "<group>"; };
 		869C3F6B0AFFE7AF78BEB051 /* Pods-GitHubUsers.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHubUsers.debug.xcconfig"; path = "Target Support Files/Pods-GitHubUsers/Pods-GitHubUsers.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -69,7 +83,11 @@
 		4985284E24AC480B0013C861 /* GitHubUsers */ = {
 			isa = PBXGroup;
 			children = (
-				4985286824AC686A0013C861 /* view */,
+				4985287624ADCED60013C861 /* ViewModel */,
+				4985287324ADBD080013C861 /* Model */,
+				4985287024ADB9660013C861 /* Common */,
+				4985286D24AC96AF0013C861 /* Manager */,
+				4985286824AC686A0013C861 /* View */,
 				4985284F24AC480B0013C861 /* AppDelegate.swift */,
 				4985285124AC480B0013C861 /* SceneDelegate.swift */,
 				4985285324AC480B0013C861 /* ViewController.swift */,
@@ -82,13 +100,48 @@
 			path = GitHubUsers;
 			sourceTree = "<group>";
 		};
-		4985286824AC686A0013C861 /* view */ = {
+		4985286824AC686A0013C861 /* View */ = {
 			isa = PBXGroup;
 			children = (
 				4985286924AC69ED0013C861 /* IconTitleStatusTableViewCell.swift */,
 				4985286A24AC69ED0013C861 /* IconTitleStatusTableViewCell.xib */,
 			);
-			path = view;
+			path = View;
+			sourceTree = "<group>";
+		};
+		4985286D24AC96AF0013C861 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				4985286E24AC96DE0013C861 /* APIManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		4985287024ADB9660013C861 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				4985287124ADB97B0013C861 /* DebugUtil.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		4985287324ADBD080013C861 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4985287424ADBD1B0013C861 /* User.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4985287624ADCED60013C861 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				4985287B24ADDE720013C861 /* ListViewModelProtocol.swift */,
+				4985287D24ADDEB80013C861 /* ItemViewModelProtocol.swift */,
+				4985287724ADCF0F0013C861 /* UserListViewModel.swift */,
+				4985287924ADD9FF0013C861 /* UserItemViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		5B21C33E0947F184F888A32E /* Frameworks */ = {
@@ -224,10 +277,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4985286F24AC96DE0013C861 /* APIManager.swift in Sources */,
 				4985285424AC480B0013C861 /* ViewController.swift in Sources */,
 				4985285A24AC480B0013C861 /* GitHubUsers.xcdatamodeld in Sources */,
 				4985286B24AC69ED0013C861 /* IconTitleStatusTableViewCell.swift in Sources */,
+				4985287C24ADDE720013C861 /* ListViewModelProtocol.swift in Sources */,
+				4985287824ADCF0F0013C861 /* UserListViewModel.swift in Sources */,
+				4985287524ADBD1B0013C861 /* User.swift in Sources */,
+				4985287E24ADDEB80013C861 /* ItemViewModelProtocol.swift in Sources */,
+				4985287224ADB97B0013C861 /* DebugUtil.swift in Sources */,
 				4985285024AC480B0013C861 /* AppDelegate.swift in Sources */,
+				4985287A24ADD9FF0013C861 /* UserItemViewModel.swift in Sources */,
 				4985285224AC480B0013C861 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

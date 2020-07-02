@@ -8,5 +8,6 @@ target 'GitHubUsers' do
   # Pods for GitHubUsers
   pod 'RxSwift'
   pod 'SDWebImage'
+  pod "RxAlamofire"
 
 end

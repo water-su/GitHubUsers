@@ -14,3 +14,8 @@
 5. extract protocols for `ListViewModel` and `ItemViewModel`
 6. implement a general list ViewController to show users in table
 7. implement a general cell for displaying a user item
+
+## Third Party library
+1. RxSwift
+2. SDWebImage: used to handle web image downloading and local cache
+3. RxAlamofire: used to handle API calls with RxSwift coding methodology
